@@ -1,0 +1,66 @@
+#search-container {
+    margin: 1em 0;
+}
+
+#search-container input {
+    background-color: transparent;
+    width: 40%;
+    border-bottom: 2px solid #1f1f1f;
+    padding: 1em 0.3em;
+}
+
+#search-container input:focus {
+    border-bottom-color: #FDC96F;
+}
+
+#search-container button {
+    padding: 1em 2em;
+    margin-left: 1em;
+    background-color: #FDC96F;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-top: 1em;
+}
+
+.button-value {
+    border: 2px solid #FDC96F;
+    padding: .5em 2.5em;
+    border-radius: 3em;
+    margin-right: 10px;
+    background-color: transparent;
+    color: #1a1a1a;
+}
+
+.active {
+    background-color: #242424;
+    color: #ffffff;
+}
+
+#products {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 2em;
+    padding: 2em 0;
+}
+
+
+/* .card {
+    background-color: #ffffff;
+    max-width: 18em;
+    margin-top: 1em;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 1em 2em 2.5em rgba(1, 2, 68, 0.08);
+} */
+
+.image-container {
+    text-align: center;
+}
+
+.container h5 {
+    font-weight: 500;
+}
+
+.hide {
+    display: none;
+}

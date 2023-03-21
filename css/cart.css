@@ -1,0 +1,31 @@
+.products {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 4px;
+    display: flex;
+    overflow-x: auto;
+}
+
+.product {
+    background: white;
+    width: 230px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 10px 0 0;
+}
+
+.circle {
+    width: 150px;
+    height: 150;
+    background: #fdc96f;
+    border-radius: 50%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}

@@ -1,0 +1,133 @@
+footer {
+    width: 100%;
+    background: url("../assets/img/footer.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-around;
+    padding: 90px 20px 20px 20px;
+}
+
+.footer_left,
+.footer_middle,
+.footer_right {
+    flex: 1;
+}
+
+.footer_left {
+    position: relative;
+}
+
+#footer_p_location {
+    width: 60%;
+    font-size: 12px;
+}
+
+#copyright {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    font-size: 11px;
+}
+
+.footer_middle {
+    padding-top: 50px;
+    padding-left: 20px;
+}
+
+.footer_middle ul li,
+.footer_middle ul li a {
+    padding: 15px 10px;
+    color: rgb(54, 54, 54);
+}
+
+.footer_left #fol_us {
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.footer_left #fol_us:hover {
+    transform: scale(1.1);
+}
+
+.footer_right {
+    padding: 0 10px;
+}
+
+.footer_right h3,
+.footer_right h2,
+.footer_right h1 {
+    font-family: 'Pacifico', cursive;
+}
+
+.div_name_email {
+    display: flex;
+    justify-content: space-around;
+}
+
+.div_name_email input {
+    margin: 5px;
+    padding: 8px 18px;
+    flex: 1;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: #5e7acd;
+    color: white;
+}
+
+.div_name_email input::placeholder,
+.feedback textarea::placeholder {
+    color: rgb(206, 206, 206);
+}
+
+.div_name_email input[type="text"] {
+    text-transform: capitalize;
+}
+
+.feedback {
+    display: flex;
+    justify-content: center;
+}
+
+.feedback textarea {
+    width: 100%;
+    padding: 8px 18px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    background: #5e7acd;
+    color: white;
+    margin: 5px;
+}
+
+#feedback_submit {
+    border: none;
+    background: #fda50f;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 20px;
+    font-size: 24px;
+    font-style: italic;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#feedback_submit:hover {
+    box-shadow: 0px 0px 10px -2px rgb(255, 255, 255);
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        flex-direction: column;
+    }
+    .div_name_email {
+        flex-direction: column;
+    }
+}

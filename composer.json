@@ -1,0 +1,7 @@
+{
+    "require": {
+        "twilio/sdk": "^6.43",
+        "clicksend/clicksend-php": "^5.0",
+        "guzzlehttp/guzzle": "^7.5"
+    }
+}

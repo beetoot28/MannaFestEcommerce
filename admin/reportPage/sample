@@ -1,0 +1,79 @@
+<div class="row">
+    <div class="col-sm-10">
+  
+
+
+        <!-- chart -->
+        <div class="row">
+            <div class="col-sm-6">
+
+                <div class="card" style="width:100%;max-width:100%;max-height:251px;">
+                    <canvas id="purchase_chart" style="width:100%;max-width:100%;max-height:251px;">
+                    </canvas>
+                </div>
+
+            </div>
+            <div class="col-sm-6">
+
+                <div class="card" style="width:100%;max-width:100%;max-height:210px;">
+                    <canvas id="inventory_chart" style="width:100%;max-width:100%;max-height:251px;"></canvas>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="col-sm-2">
+
+        <center>
+            <h5 style="font-weight: bolder;">Top Selling Product</h5>
+        </center>
+        <?php 
+                   
+           $side = mysqli_query($con, "SELECT trans_record.prod_id,name,sum(quantity) as qty from trans_record
+            LEFT JOIN product on trans_record.prod_id = product.prod_id group by name");?>
+        <table class="table table-hover">
+            <thead class='table-warning'>
+                <tr>
+                    <th scope="col">Product </th>
+                    <th scope="col">Quantity Sold</th>
+                </tr>
+            </thead> <?php 
+                                         while ($row = mysqli_fetch_array($side)) { ?> <tbody>
+                <tr>
+                    <td> <?php echo $row['name']?> </td>
+                    <td> <?php echo $row['qty']?> </td>
+                </tr> <?php } ?>
+            </tbody>
+        </table>
+
+        <center>
+            <h5 style="font-weight: bolder;">Website Visits</h5>
+        </center>
+
+        <?php 
+                   
+                   $web_traffic = mysqli_query($con,"SELECT device_type, COUNT(*) AS visitors_today, DATE(date) AS visit_date FROM traffic_log GROUP BY device_type, DATE(date)");?>
+        <table id='table-traffic' class="table table-hover">
+            <thead class='table-warning'>
+                <tr>
+                    <th scope="col">Date </th>
+                    <th scope="col">Device </th>
+                    <th scope="col">Traffic</th>
+                </tr>
+            </thead> <?php 
+                    while ($row = mysqli_fetch_array($web_traffic)) { ?> <tbody>
+                <tr>
+                    <td> <?php echo $row['visit_date']?> </td>
+                    <td> <?php echo $row['device_type']?> </td>
+                    <td> <?php echo $row['visitors_today']?> </td>
+                </tr> <?php } ?>
+            </tbody>
+        </table>
+
+
+
+    </div>
+</div>
+
+
